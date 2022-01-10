@@ -1,0 +1,48 @@
+package myScanner;
+import java.util.Scanner;
+
+public class NotesSlides8 {
+	
+	public static void main (String[] args) {
+		double x,number,price1,quantity1,price2,quantity2,price3,quantity3,amount1,amount2,amount3;
+		double total,discount,price;
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter the number of items :");
+		x=sc.nextInt();
+		System.out.print("Enter price of first item :");
+		price1=sc.nextDouble();
+		System.out.print("Enter quantity of first item :");
+		quantity1=sc.nextDouble();
+		amount1=price1*quantity1;
+		System.out.print("Enter price of second item :");
+		price2=sc.nextDouble();
+		System.out.print("Enter quantity of second item :");
+		quantity2=sc.nextDouble();
+		amount2=price2*quantity2;
+		System.out.print("Enter price of third item :");
+		price3=sc.nextDouble();
+		System.out.print("Enter quantity of third item :");
+		quantity3=sc.nextDouble();
+		amount3=price3*quantity3;
+		
+		total= amount1+amount2+amount3;
+		 if (total >=100) 
+	        {  
+	            discount=(20*total)/100;  
+	            price=total-discount;
+	            System.out.printf("\nTotal price       : RM%.2f",total);
+	            System.out.printf("\nDiscount received : RM%.2f",discount);
+	            System.out.printf("\nPrice to be paid  : RM%.2f",price);
+	        } 
+	        else
+	        {  
+	        	discount=(10*total)/100;  
+	        	price=total-discount;
+	            System.out.printf("\nTotal price       : RM%.2f",total);
+	            System.out.printf("\nDiscount received : RM%.2f",discount);
+	            System.out.printf("\nPrice to be paid  : RM%.2f",price);
+	        }  
+	}
+		
+
+}
