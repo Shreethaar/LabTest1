@@ -10,8 +10,7 @@ public class example {
 		sales=sc.nextDouble();
 		System.out.println("Enter hours worked:");
 		hours=sc.nextDouble();
-		dailyWages=hours*hourWage;
-		
+
 		if (sales>=150 && sales<=300) 
 			commission=sales*0.05;
 		
@@ -25,6 +24,7 @@ public class example {
 			System.out.println("Input error");
 		
 		System.out.println("Commission: "+"RM"+(String.format("%.2f",commission)));
+		dailyWages=(hours*hourWage)+commission;
 		System.out.println("Daily wages: "+"RM"+(String.format("%.2f",dailyWages)));
 	}
 	
