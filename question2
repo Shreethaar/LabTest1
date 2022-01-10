@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class example {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String name;
+		double hourWage, sales, hours=0, commission=0,dailyWages;
+		hourWage=5;
+		
+		System.out.println("Enter sales:");
+		sales=sc.nextDouble();
+		System.out.println("Enter hours worked:");
+		hours=sc.nextDouble();
+		dailyWages=hours*hourWage;
+		
+		if (sales>=150 && sales<=300) 
+			commission=sales*0.05;
+		
+		else if (sales>=301 && sales<=500) 
+			commission=sales*0.1;
+		
+		else if (sales>=501) 
+			commission=sales*0.15;
+		
+		else 
+			System.out.println("Input error");
+		
+		System.out.println("Commission: "+"RM"+(String.format("%.2f",commission)));
+		System.out.println("Daily wages: "+"RM"+(String.format("%.2f",dailyWages)));
+	}
+	
+}
